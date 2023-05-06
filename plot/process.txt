@@ -1,0 +1,536 @@
+D:\pack\anaconda\Anaconda\envs\speed\python.exe "D:\Program Files\JetBrains\PyCharm Community Edition 2021.2.3\plugins\python-ce\helpers\pydev\pydevd.py" --multiproc --qt-support=auto --client 127.0.0.1 --port 51144 --file D:/Space/Spaceself/实验/ASTGCN/DMSTGCN-main/train.py
+Connected to pydev debugger (build 212.5457.59)
+113
+data/Mydata
+Namespace(batch_size=32, data='Mydata', data_dir='data/Mydata', days=288, device='cuda:0', dims=32, dropout=0.3, epochs=200, expid=0, iden='', in_dim=1, in_len=12, learning_rate=0.001, nhid=32, normalization='batch', num_nodes=113, order=2, print_every=50, runs=1, save='save_models/Mydata', seq_length=12, weight_decay=0.0001)
+start training...
+input.shape
+Python 3.6.13 |Anaconda, Inc.| (default, Mar 16 2021, 11:37:27) [MSC v.1916 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.16.1 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.16.1
+Out[1]: torch.Size([32, 2, 113, 13])
+adp.shape
+Out[2]: torch.Size([32, 113, 113])
+x.shape
+Out[3]: torch.Size([32, 32, 113, 13])
+self.filter_convs
+Out[4]: 
+ModuleList(
+  (0): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1))
+  (1): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+  (2): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1))
+  (3): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+  (4): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1))
+  (5): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+  (6): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1))
+  (7): Conv2d(32, 32, kernel_size=(1, 2), stride=(1, 1), dilation=(2, 2))
+)
+filter.shape
+Out[5]: torch.Size([32, 32, 113, 12])
+self.gate_convs
+Out[6]: 
+ModuleList(
+  (0): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,))
+  (1): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,), dilation=(2,))
+  (2): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,))
+  (3): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,), dilation=(2,))
+  (4): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,))
+  (5): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,), dilation=(2,))
+  (6): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,))
+  (7): Conv1d(32, 32, kernel_size=(1, 2), stride=(1,), dilation=(2,))
+)
+x.shape
+Out[7]: torch.Size([32, 32, 113, 12])
+gate.shape
+Out[8]: torch.Size([32, 32, 113, 12])
+13->12
+  File "<ipython-input-9-1ab8931522e0>", line 1
+    13->12
+       ^
+SyntaxError: invalid syntax
+self.skip_convs
+Out[10]: 
+ModuleList(
+  (0): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+  (1): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+  (2): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+  (3): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+  (4): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+  (5): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+  (6): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+  (7): Conv1d(32, 8, kernel_size=(1, 1), stride=(1,))
+)
+skip.shape
+Out[11]: torch.Size([32, 96, 113, 1])
+self.gconv
+Out[12]: 
+ModuleList(
+  (0): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (1): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (2): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (3): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (4): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (5): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (6): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (7): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+)
+x.shape
+Out[13]: torch.Size([32, 32, 113, 12])
+self.nconv
+Out[14]: nconv()
+x1.shape
+Out[15]: torch.Size([32, 32, 113, 12])
+x2.shape
+Out[16]: torch.Size([32, 32, 113, 12])
+self.mlp
+Out[17]: 
+linear(
+  (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+)
+x.shape
+Out[18]: torch.Size([32, 32, 113, 12])
+self.gconv_a2p
+Out[19]: 
+ModuleList(
+  (0): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (1): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (2): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (3): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (4): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (5): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (6): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (7): gcn(
+    (nconv): nconv()
+    (mlp): linear(
+      (mlp): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+)
+x_a2p.shape
+Out[20]: torch.Size([32, 32, 113, 12])
+x.shape
+Out[21]: torch.Size([32, 32, 113, 12])
+self.normal
+Out[22]: 
+ModuleList(
+  (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (5): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (6): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (7): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+x.shape
+Out[23]: torch.Size([32, 32, 113, 12])
+x.shape
+Out[24]: torch.Size([32, 32, 113, 10])
+skip.shape
+Out[25]: torch.Size([32, 176, 113, 1])
+s.transpose(2, 3).reshape([s.shape[0], -1, s.shape[2],1]).shape
+Out[26]: torch.Size([32, 80, 113, 1])
+x.shape
+Out[27]: torch.Size([32, 32, 113, 10])
+x.shape
+Out[28]: torch.Size([32, 32, 113, 10])
+x.shape
+Out[29]: torch.Size([32, 32, 113, 9])
+pydev debugger: warning: trying to add breakpoint to file that does not exist: d:\python console (will have no effect)
+s.transpose(2, 3).reshape([s.shape[0], -1, s.shape[2], 1]).shape
+Out[30]: torch.Size([32, 72, 113, 1])
+skip.shape
+Out[31]: torch.Size([32, 248, 113, 1])
+x.shape
+Out[32]: torch.Size([32, 32, 113, 7])
+s.transpose(2, 3).reshape([s.shape[0], -1, s.shape[2], 1]).shape
+Out[33]: torch.Size([32, 56, 113, 1])
+skip.shape
+Out[34]: torch.Size([32, 304, 113, 1])
+x.shape
+Out[35]: torch.Size([32, 32, 113, 3])
+gata.shape
+Traceback (most recent call last):
+  File "D:\pack\anaconda\Anaconda\envs\speed\lib\site-packages\IPython\core\interactiveshell.py", line 3343, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-36-c65e0987a320>", line 1, in <module>
+    gata.shape
+NameError: name 'gata' is not defined
+self.gata.shape
+Traceback (most recent call last):
+  File "D:\pack\anaconda\Anaconda\envs\speed\lib\site-packages\IPython\core\interactiveshell.py", line 3343, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-37-99872294369b>", line 1, in <module>
+    self.gata.shape
+  File "D:\pack\anaconda\Anaconda\envs\speed\lib\site-packages\torch\nn\modules\module.py", line 1178, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'DMSTGCN' object has no attribute 'gata'
+gate.shape
+Out[38]: torch.Size([32, 32, 113, 1])
+filter.shape
+Out[39]: torch.Size([32, 32, 113, 1])
+x.shape
+Out[40]: torch.Size([32, 32, 113, 1])
+skip.shape
+Out[41]: torch.Size([32, 416, 113, 1])
+x.shape
+Out[42]: torch.Size([32, 32, 113, 1])
+x.shape
+Out[43]: torch.Size([32, 32, 113, 1])
+self.end_conv_1
+Out[44]: Conv2d(416, 512, kernel_size=(1, 1), stride=(1, 1))
+self.end_conv_2
+Out[45]: Conv2d(512, 12, kernel_size=(1, 1), stride=(1, 1))
+x.shape
+Out[46]: torch.Size([32, 416, 113, 1])
+x.shape
+Out[47]: torch.Size([32, 512, 113, 1])
+x.shape
+Out[48]: torch.Size([32, 12, 113, 1])
+output.shape
+Out[49]: torch.Size([32, 12, 113, 1])
+output
+Out[50]: 
+tensor([[[[-0.0183],
+          [-0.0447],
+          [-0.0165],
+          ...,
+          [-0.0347],
+          [-0.0288],
+          [-0.0580]],
+         [[-0.0343],
+          [-0.1021],
+          [-0.0483],
+          ...,
+          [-0.0631],
+          [-0.0636],
+          [-0.0558]],
+         [[ 0.0481],
+          [ 0.0822],
+          [ 0.0396],
+          ...,
+          [ 0.0647],
+          [ 0.0727],
+          [ 0.0658]],
+         ...,
+         [[-0.0465],
+          [-0.0202],
+          [-0.0132],
+          ...,
+          [-0.0262],
+          [-0.0254],
+          [-0.0164]],
+         [[ 0.0299],
+          [ 0.0400],
+          [ 0.0277],
+          ...,
+          [ 0.0428],
+          [ 0.0375],
+          [ 0.0466]],
+         [[-0.0129],
+          [ 0.0324],
+          [-0.0255],
+          ...,
+          [-0.0021],
+          [ 0.0067],
+          [-0.0099]]],
+        [[[-0.0475],
+          [-0.0348],
+          [-0.0334],
+          ...,
+          [-0.0345],
+          [-0.0430],
+          [-0.0291]],
+         [[-0.0527],
+          [-0.0905],
+          [-0.0694],
+          ...,
+          [-0.0059],
+          [-0.0317],
+          [-0.0193]],
+         [[ 0.0496],
+          [ 0.0917],
+          [ 0.0654],
+          ...,
+          [ 0.0735],
+          [ 0.0445],
+          [ 0.0388]],
+         ...,
+         [[-0.0344],
+          [-0.0322],
+          [-0.0177],
+          ...,
+          [-0.0328],
+          [-0.0335],
+          [-0.0371]],
+         [[ 0.0374],
+          [ 0.0213],
+          [ 0.0430],
+          ...,
+          [ 0.0275],
+          [ 0.0231],
+          [ 0.0519]],
+         [[ 0.0066],
+          [ 0.0081],
+          [-0.0119],
+          ...,
+          [-0.0216],
+          [-0.0207],
+          [-0.0282]]],
+        [[[-0.0474],
+          [-0.0362],
+          [-0.0301],
+          ...,
+          [-0.0288],
+          [-0.0324],
+          [-0.0143]],
+         [[-0.0410],
+          [-0.0659],
+          [-0.0632],
+          ...,
+          [-0.0384],
+          [-0.0111],
+          [-0.0201]],
+         [[ 0.0501],
+          [ 0.0695],
+          [ 0.0451],
+          ...,
+          [ 0.0630],
+          [ 0.0565],
+          [ 0.0438]],
+         ...,
+         [[-0.0314],
+          [-0.0240],
+          [-0.0160],
+          ...,
+          [-0.0345],
+          [-0.0148],
+          [-0.0185]],
+         [[ 0.0237],
+          [ 0.0375],
+          [ 0.0485],
+          ...,
+          [ 0.0365],
+          [ 0.0157],
+          [ 0.0198]],
+         [[ 0.0184],
+          [ 0.0233],
+          [ 0.0149],
+          ...,
+          [-0.0018],
+          [-0.0113],
+          [-0.0234]]],
+        ...,
+        [[[-0.0666],
+          [-0.0184],
+          [-0.0439],
+          ...,
+          [-0.0564],
+          [-0.0530],
+          [-0.0414]],
+         [[-0.0735],
+          [-0.0488],
+          [-0.0462],
+          ...,
+          [-0.0281],
+          [-0.0273],
+          [-0.0675]],
+         [[ 0.0194],
+          [ 0.0481],
+          [ 0.0636],
+          ...,
+          [ 0.0360],
+          [ 0.0541],
+          [ 0.0770]],
+         ...,
+         [[-0.0226],
+          [-0.0558],
+          [-0.0260],
+          ...,
+          [-0.0185],
+          [-0.0298],
+          [-0.0159]],
+         [[ 0.0502],
+          [ 0.0211],
+          [ 0.0287],
+          ...,
+          [ 0.0287],
+          [ 0.0112],
+          [-0.0039]],
+         [[ 0.0026],
+          [-0.0103],
+          [-0.0298],
+          ...,
+          [-0.0252],
+          [-0.0043],
+          [-0.0249]]],
+        [[[-0.0513],
+          [-0.0212],
+          [-0.0444],
+          ...,
+          [-0.0148],
+          [-0.0498],
+          [-0.0396]],
+         [[-0.0612],
+          [-0.0271],
+          [-0.0210],
+          ...,
+          [-0.0447],
+          [-0.0590],
+          [-0.0414]],
+         [[ 0.0241],
+          [ 0.0556],
+          [ 0.0646],
+          ...,
+          [ 0.0012],
+          [ 0.0407],
+          [ 0.0433]],
+         ...,
+         [[-0.0246],
+          [-0.0290],
+          [-0.0150],
+          ...,
+          [-0.0271],
+          [-0.0577],
+          [-0.0210]],
+         [[ 0.0341],
+          [ 0.0366],
+          [ 0.0273],
+          ...,
+          [ 0.0277],
+          [ 0.0210],
+          [ 0.0319]],
+         [[-0.0108],
+          [-0.0090],
+          [-0.0178],
+          ...,
+          [-0.0271],
+          [ 0.0035],
+          [-0.0195]]],
+        [[[-0.0396],
+          [-0.0161],
+          [-0.0436],
+          ...,
+          [-0.0610],
+          [-0.0538],
+          [-0.0349]],
+         [[-0.0720],
+          [-0.0475],
+          [-0.0709],
+          ...,
+          [-0.0309],
+          [-0.0354],
+          [-0.0642]],
+         [[ 0.0297],
+          [ 0.0488],
+          [ 0.0565],
+          ...,
+          [ 0.0423],
+          [ 0.0601],
+          [ 0.0939]],
+         ...,
+         [[-0.0140],
+          [-0.0511],
+          [-0.0342],
+          ...,
+          [-0.0108],
+          [-0.0142],
+          [-0.0257]],
+         [[ 0.0344],
+          [ 0.0248],
+          [ 0.0352],
+          ...,
+          [ 0.0201],
+          [ 0.0256],
+          [ 0.0254]],
+         [[ 0.0004],
+          [-0.0048],
+          [-0.0210],
+          ...,
+          [-0.0462],
+          [-0.0238],
+          [ 0.0097]]]], device='cuda:0', grad_fn=<AddBackward0>)
+output.shape
+Out[51]: torch.Size([32, 1, 113, 12])
+real.shape
+Out[52]: torch.Size([32, 1, 113, 12])
+torch.unsqueeze(real_val, dim=1).shape
+Out[53]: torch.Size([32, 1, 113, 12])
+predict.shape
+Out[54]: torch.Size([32, 1, 113, 12])

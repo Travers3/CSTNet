@@ -1,0 +1,64 @@
+The valid loss on best model is 1.6498
+Evaluate best model on test data for horizon 1, Test MAE: 1.6895, Test MAPE: 1.3890, Test RMSE: 2.9058
+Evaluate best model on test data for horizon 2, Test MAE: 1.6941, Test MAPE: 1.3682, Test RMSE: 2.9234
+Evaluate best model on test data for horizon 3, Test MAE: 1.6957, Test MAPE: 1.3863, Test RMSE: 2.9203
+Evaluate best model on test data for horizon 4, Test MAE: 1.6991, Test MAPE: 1.4104, Test RMSE: 2.9185
+Evaluate best model on test data for horizon 5, Test MAE: 1.7063, Test MAPE: 1.3409, Test RMSE: 2.9565
+Evaluate best model on test data for horizon 6, Test MAE: 1.7065, Test MAPE: 1.3733, Test RMSE: 2.9487
+Evaluate best model on test data for horizon 7, Test MAE: 1.7089, Test MAPE: 1.3543, Test RMSE: 2.9568
+Evaluate best model on test data for horizon 8, Test MAE: 1.7102, Test MAPE: 1.3678, Test RMSE: 2.9531
+Evaluate best model on test data for horizon 9, Test MAE: 1.7138, Test MAPE: 1.3505, Test RMSE: 2.9695
+Evaluate best model on test data for horizon 10, Test MAE: 1.7180, Test MAPE: 1.3421, Test RMSE: 2.9783
+Evaluate best model on test data for horizon 11, Test MAE: 1.7226, Test MAPE: 1.3292, Test RMSE: 2.9888
+Evaluate best model on test data for horizon 12, Test MAE: 1.7224, Test MAPE: 1.3443, Test RMSE: 2.9849
+On average over 12 horizons, Test MAE: 1.7073, Test MAPE: 1.3630, Test RMSE: 2.9504
+
+astgcn
+
+The valid loss on best model is 1.6648
+Evaluate best model on test data for horizon 1, Test MAE: 1.7054, Test MAPE: 1.3540, Test RMSE: 2.9434
+Evaluate best model on test data for horizon 2, Test MAE: 1.7065, Test MAPE: 1.3471, Test RMSE: 2.9460
+Evaluate best model on test data for horizon 3, Test MAE: 1.7098, Test MAPE: 1.3379, Test RMSE: 2.9557
+Evaluate best model on test data for horizon 4, Test MAE: 1.7127, Test MAPE: 1.3382, Test RMSE: 2.9603
+Evaluate best model on test data for horizon 5, Test MAE: 1.7134, Test MAPE: 1.3492, Test RMSE: 2.9594
+Evaluate best model on test data for horizon 6, Test MAE: 1.7185, Test MAPE: 1.3349, Test RMSE: 2.9750
+Evaluate best model on test data for horizon 7, Test MAE: 1.7216, Test MAPE: 1.3229, Test RMSE: 2.9837
+Evaluate best model on test data for horizon 8, Test MAE: 1.7236, Test MAPE: 1.3300, Test RMSE: 2.9830
+Evaluate best model on test data for horizon 9, Test MAE: 1.7250, Test MAPE: 1.3409, Test RMSE: 2.9847
+Evaluate best model on test data for horizon 10, Test MAE: 1.7258, Test MAPE: 1.3471, Test RMSE: 2.9864
+Evaluate best model on test data for horizon 11, Test MAE: 1.7298, Test MAPE: 1.3343, Test RMSE: 2.9967
+Evaluate best model on test data for horizon 12, Test MAE: 1.7299, Test MAPE: 1.3435, Test RMSE: 2.9957
+On average over 12 horizons, Test MAE: 1.7185, Test MAPE: 1.3400, Test RMSE: 2.9725
+Total time spent: 1030.3541
+
+gated_stgcn
+
+The valid loss on best model is 1.6814
+Evaluate best model on test data for horizon 1, Test MAE: 1.7023, Test MAPE: 1.4171, Test RMSE: 2.9282
+Evaluate best model on test data for horizon 2, Test MAE: 1.7069, Test MAPE: 1.3953, Test RMSE: 2.9404
+Evaluate best model on test data for horizon 3, Test MAE: 1.7108, Test MAPE: 1.3833, Test RMSE: 2.9511
+Evaluate best model on test data for horizon 4, Test MAE: 1.7130, Test MAPE: 1.4315, Test RMSE: 2.9405
+Evaluate best model on test data for horizon 5, Test MAE: 1.7165, Test MAPE: 1.3949, Test RMSE: 2.9581
+Evaluate best model on test data for horizon 6, Test MAE: 1.7191, Test MAPE: 1.4096, Test RMSE: 2.9616
+Evaluate best model on test data for horizon 7, Test MAE: 1.7249, Test MAPE: 1.3680, Test RMSE: 2.9821
+Evaluate best model on test data for horizon 8, Test MAE: 1.7309, Test MAPE: 1.3313, Test RMSE: 3.0021
+Evaluate best model on test data for horizon 9, Test MAE: 1.7330, Test MAPE: 1.3182, Test RMSE: 3.0100
+Evaluate best model on test data for horizon 10, Test MAE: 1.7329, Test MAPE: 1.3398, Test RMSE: 3.0063
+Evaluate best model on test data for horizon 11, Test MAE: 1.7365, Test MAPE: 1.3392, Test RMSE: 3.0115
+Evaluate best model on test data for horizon 12, Test MAE: 1.7374, Test MAPE: 1.3403, Test RMSE: 3.0139
+On average over 12 horizons, Test MAE: 1.7220, Test MAPE: 1.3724, Test RMSE: 2.9755
+
+The valid loss on best model is 1.7156
+Evaluate best model on test data for horizon 1, Test MAE: 1.7204, Test MAPE: 1.4969, Test RMSE: 2.9307
+Evaluate best model on test data for horizon 2, Test MAE: 1.7271, Test MAPE: 1.4697, Test RMSE: 2.9495
+Evaluate best model on test data for horizon 3, Test MAE: 1.7336, Test MAPE: 1.4572, Test RMSE: 2.9631
+Evaluate best model on test data for horizon 4, Test MAE: 1.7400, Test MAPE: 1.4687, Test RMSE: 2.9742
+Evaluate best model on test data for horizon 5, Test MAE: 1.7471, Test MAPE: 1.4312, Test RMSE: 2.9999
+Evaluate best model on test data for horizon 6, Test MAE: 1.7524, Test MAPE: 1.4582, Test RMSE: 2.9996
+Evaluate best model on test data for horizon 7, Test MAE: 1.7559, Test MAPE: 1.4936, Test RMSE: 2.9989
+Evaluate best model on test data for horizon 8, Test MAE: 1.7626, Test MAPE: 1.4705, Test RMSE: 3.0160
+Evaluate best model on test data for horizon 9, Test MAE: 1.7697, Test MAPE: 1.4288, Test RMSE: 3.0437
+Evaluate best model on test data for horizon 10, Test MAE: 1.7703, Test MAPE: 1.5055, Test RMSE: 3.0216
+Evaluate best model on test data for horizon 11, Test MAE: 1.7770, Test MAPE: 1.4447, Test RMSE: 3.0574
+Evaluate best model on test data for horizon 12, Test MAE: 1.7778, Test MAPE: 1.4718, Test RMSE: 3.0489
+On average over 12 horizons, Test MAE: 1.7528, Test MAPE: 1.4664, Test RMSE: 3.0003
